@@ -2,11 +2,15 @@ import axios from 'axios';
 import { message } from 'antd';
 
 export const getCurrentUser = () => async dispatch => {
+
+  const apiUrl =process.env.REACT_APP_API_URL;
+  
   const bearerToken = JSON.parse(localStorage.getItem('user'));
   dispatch({ type: 'LOADING', payload: true });
 
+
   try {
-    const response = await axios.get('/api/users/current', {
+    const response = await axios.get(`${apiUrl}/api/users/current`, {
       headers: {
         Authorization: `Bearer ${bearerToken}`,
       },

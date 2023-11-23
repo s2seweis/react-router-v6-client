@@ -27,7 +27,10 @@ function GoogleLoginComponent () {
   };
 
   const handleLogin = async googleData => {
-    const res = await fetch ('/api/users/google-login', {
+
+    const apiUrl =process.env.REACT_APP_API_URL;
+
+    const res = await fetch (`${apiUrl}/api/users/google-login`, {
       method: 'POST',
       body: JSON.stringify ({
         token: googleData.credential,

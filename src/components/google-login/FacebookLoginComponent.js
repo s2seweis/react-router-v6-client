@@ -4,6 +4,9 @@ import FacebookLogin from 'react-facebook-login';
 import { getCurrentUser } from '../../redux/actions/currentUserAction';
 import { useDispatch } from 'react-redux';
 
+const apiUrl =process.env.REACT_APP_API_URL;
+    console.log("line:600", apiUrl);
+
 function FacebookLoginComponent(users) {
   const dispatch = useDispatch();
 
@@ -24,7 +27,9 @@ function FacebookLoginComponent(users) {
 
   const responseFacebook = async response => {
 
-    const res = await fetch('/api/users/facebook-login', {
+    const apiUrl =process.env.REACT_APP_API_URL;
+
+    const res = await fetch(`${apiUrl}/api/users/facebook-login`, {
       method: 'POST',
       body: JSON.stringify({
         userfacebook: response,
