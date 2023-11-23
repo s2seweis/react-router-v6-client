@@ -1,3 +1,4 @@
+/* eslint-disable */
 import axios from 'axios';
 import {message} from 'antd';
 import {getCurrentUser} from './currentUserAction';

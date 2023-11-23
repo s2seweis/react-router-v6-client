@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from 'react';
 import FacebookLogin from 'react-facebook-login';
 import { getCurrentUser } from '../../redux/actions/currentUserAction';

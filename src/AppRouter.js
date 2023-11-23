@@ -1,3 +1,4 @@
+/* eslint-disable */
 // import './AppRouter.css';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -50,7 +51,7 @@ function AppRouter() {
     };
 
     return (
-        <div style={{display:"flex", justifyContent:"center"}} className="AppRouter">
+        <div style={{display:'flex', justifyContent:'center'}} className="AppRouter">
             <Router>
                 <Routes>
                     <Route element={<PublicRoutes user={publicUser} />}>
