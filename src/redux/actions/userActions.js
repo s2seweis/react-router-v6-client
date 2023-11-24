@@ -7,7 +7,7 @@ const apiUrl =process.env.REACT_APP_API_URL;
 export const userLogin = reqObj => async dispatch => {
   dispatch ({type: 'LOADING', payload: true});
   try {
-    const response = await axios.post (`${apiUrl}/api/users/login`, reqObj);
+    const response = await axios.post (`https://react-router-v6-server-c641af014fb5.herokuapp.com/api/users/login`, reqObj);
     localStorage.setItem ('user', JSON.stringify (response.data.accessToken));
     dispatch ({type: 'GET_USERS', payload: response.data});
     dispatch (getCurrentUser (response.data));
@@ -27,7 +27,7 @@ export const requestResetPassword = reqObj => async dispatch => {
 
   try {
     const response = await axios.post (
-      `${apiUrl}/api/users/requestResetPassword`,
+      `https://react-router-v6-server-c641af014fb5.herokuapp.com/api/users/requestResetPassword`,
       reqObj,
     );
     message.success ('Go and check your emails for the reset link');
@@ -47,7 +47,7 @@ export const resetPassword = reqObj => async dispatch => {
   dispatch ({type: 'LOADING', payload: true});
 
   try {
-    const response = await axios.post (`${apiUrl}/api/users/resetPassword`, reqObj);
+    const response = await axios.post (`https://react-router-v6-server-c641af014fb5.herokuapp.com/api/users/resetPassword`, reqObj);
     message.success ('The Password changed successfully !!');
     setTimeout (() => {
       window.location.href = '/login';
@@ -63,7 +63,7 @@ export const userRegister = reqObj => async dispatch => {
   dispatch ({type: 'LOADING', payload: true});
 
   try {
-    const response = await axios.post (`${apiUrl}/api/users/register`, reqObj);
+    const response = await axios.post (`https://react-router-v6-server-c641af014fb5.herokuapp.com/api/users/register`, reqObj);
     message.success ('Registration successful');
 
     setTimeout (() => {

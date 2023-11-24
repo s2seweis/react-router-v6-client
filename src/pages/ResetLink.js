@@ -3,7 +3,7 @@ import React from 'react';
 
 const ResetLink = () => {
   return (
-    <div style={{ marginTop: '0px' }}>
+    <div style={{width:"100%"}}>
       <div style={{ margin: '15px 0px 0px 15px', display: 'flex' }}>
         <a href='javascript:history.back()'>Go Back</a>
       </div>

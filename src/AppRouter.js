@@ -20,6 +20,7 @@ import EditSetting from './pages/EditSetting';
 import ForgotPassword from './pages/ForgotPassword';
 import PasswordReset from './pages/PasswordReset';
 import ResetLink from './pages/ResetLink';
+import Greeting from './pages/Greeting';
 import 'antd/dist/antd.min.css';
 
 function AppRouter() {
@@ -86,6 +87,7 @@ function AppRouter() {
                     <Route element={<ForgotPassword />} path="/forgotpassword" />
                     <Route element={<PasswordReset />} path="/passwordreset/:token/:id" />
                     <Route element={<ResetLink />} path="/resetlink" />
+                    <Route element={<Greeting />} path="/greeting" />
                 </Routes>
             </Router>
         </div>

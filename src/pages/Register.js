@@ -18,7 +18,7 @@ function Register() {
   }
 
   return (
-    <div className='login' style={{ margin: 'auto', padding: '20px', minWidth:'350px' }}>
+    <div className='login' style={{ margin: 'auto', padding: '20px', minWidth:'350px', marginTop:"40px" }}>
       {loading && <Spinner />}
       <Row
         gutter={16}

@@ -10,7 +10,7 @@ export const getCurrentUser = () => async dispatch => {
 
 
   try {
-    const response = await axios.get(`${apiUrl}/api/users/current`, {
+    const response = await axios.get(`https://react-router-v6-server-c641af014fb5.herokuapp.com/api/users/current`, {
       headers: {
         Authorization: `Bearer ${bearerToken}`,
       },

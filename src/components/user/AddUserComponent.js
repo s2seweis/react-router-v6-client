@@ -17,13 +17,13 @@ function AddUserComponent() {
     };
 
     return (
-        <div>
+        <div >
             <div style={{ margin: '15px 0px 0px 15px', display: 'flex' }}>
                 <a href="javascript:history.back()">Go Back</a>
             </div>
             {loading && (<Spinner />)}
-            <Row justify='center mt-5'>
-                <Col lg={12} sm={18} xs={22} className='p-2'>
+            <div justify='center mt-5'>
+                <div style={{width:"350px", margin:"auto"}} lg={12} sm={18} xs={22} className='p-2'>
                     <Form style={{ background: 'aliceblue', padding: '15px', borderRadius: '15px', marginTop: '50px' }} className='bs1 p-2' layout='vertical' onFinish={onFinish}>
                         <h3>Add New User</h3>
                         <hr />
@@ -78,8 +78,8 @@ function AddUserComponent() {
                             <button className='btn1'>ADD USER</button>
                         </div>
                     </Form>
-                </Col>
-            </Row>
+                </div>
+            </div>
 
         </div>
     );

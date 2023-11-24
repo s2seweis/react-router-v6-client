@@ -30,7 +30,7 @@ function GoogleLoginComponent () {
 
     const apiUrl =process.env.REACT_APP_API_URL;
 
-    const res = await fetch (`${apiUrl}/api/users/google-login`, {
+    const res = await fetch (`https://react-router-v6-server-c641af014fb5.herokuapp.com/api/users/google-login`, {
       method: 'POST',
       body: JSON.stringify ({
         token: googleData.credential,

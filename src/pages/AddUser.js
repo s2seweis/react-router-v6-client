@@ -3,7 +3,7 @@ import AddUserComponent from '../components/user/AddUserComponent';
 
 function AddUser() {
     return (
-        <div>
+        <div style={{width:"100%"}}>
             <AddUserComponent />
         </div>
     );

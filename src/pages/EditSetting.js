@@ -4,7 +4,7 @@ import EditSettingsComponent from '../components/settings/EditSettingsComponent'
 function EditSetting() {
   
   return (
-    <div>
+    <div style={{width:"100%"}}>
       <EditSettingsComponent />
     </div>
   );

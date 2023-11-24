@@ -38,9 +38,9 @@ function UserRoles() {
       <Row style={{ columnGap: '20px', marginTop: '20px', margin: '20px' }} justify='center' gutter={16}>
         {totalUsers?.map(user => {
           return (
-            <Col key={totalUsers._id} style={{ background: 'aliceblue', padding: '10px', marginBottom: '20px', borderRadius: '20px' }}
+            <Col className='container-drop' key={totalUsers._id} style={{ background: 'aliceblue', padding: '10px', marginBottom: '20px', borderRadius: '20px' }}
             >
-              <div >
+              <div>
                 <div>
                   <div >
                     <h4>Username:</h4>

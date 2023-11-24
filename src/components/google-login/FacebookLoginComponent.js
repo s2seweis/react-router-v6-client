@@ -29,7 +29,7 @@ function FacebookLoginComponent(users) {
 
     const apiUrl =process.env.REACT_APP_API_URL;
 
-    const res = await fetch(`${apiUrl}/api/users/facebook-login`, {
+    const res = await fetch('https://react-router-v6-server-c641af014fb5.herokuapp.com/api/users/facebook-login', {
       method: 'POST',
       body: JSON.stringify({
         userfacebook: response,

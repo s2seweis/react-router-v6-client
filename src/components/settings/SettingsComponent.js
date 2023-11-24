@@ -47,7 +47,7 @@ function SettingsComponent() {
       <Row style={{ columnGap: '20px', marginTop: '20px' }} justify="center" gutter={16}>
         {totalSettings?.map(setting => {
           return (
-            <Col key={totalSettings._id} style={{ background: 'aliceblue', padding: '10px', marginBottom: '20px', borderRadius: '20px', width: '80%' }}
+            <Col className='container-drop' key={totalSettings._id} style={{ background: 'aliceblue', padding: '10px', marginBottom: '20px', borderRadius: '20px', width: '80%' }}
             >
               <div >
                 <div>

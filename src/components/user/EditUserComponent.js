@@ -41,8 +41,8 @@ function EditUserComponent() {
         <a href="javascript:history.back()">Go Back</a>
       </div>
       {loading && <Spinner />}
-      <Row justify="center mt-5" style={{ marginTop: '25px' }}>
-        <Col style={{ background: 'aliceblue', borderRadius: '10px' }} lg={12} sm={20} xs={22} className="p-2">
+      <div style={{width:"350px", margin:"auto"}} justify="center mt-5" >
+        <div style={{ background: 'aliceblue', borderRadius: '10px' }} lg={12} sm={20} xs={22} className="p-2">
           {totalusers.length > 0 &&
             <Form
               initialValues={user}
@@ -104,8 +104,8 @@ function EditUserComponent() {
                 <button className="btn1">Edit USER1</button>
               </div>
             </Form>}
-        </Col>
-      </Row>
+        </div>
+      </div>
     </div>
   );
 }

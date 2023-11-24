@@ -17,13 +17,13 @@ function ForgotPassword() {
   }
 
   return (
-    <div className='login' style={{ backgroundColor: '#fafafa' }}>
+    <div className='login' style={{ backgroundColor: 'aliceblue', marginTop:"40px" }}>
 
       <div style={{ margin: '15px 0px 15px 15px', display: 'flex' }}>
         <a href='javascript:history.back()'>Go Back</a>
       </div>
 
-      <div style={{ margin: 'auto', background: 'aliceblue', padding: '20px', width: 'fit-content', borderRadius: '25px' }}>
+      <div style={{ margin: 'auto', padding: '20px', width: 'fit-content', borderRadius: '25px' }}>
 
         {loading && <Spinner />}
         <Row gutter={16} className='d-flex aligin-items-center' style={{ justifyContent: 'center' }}>

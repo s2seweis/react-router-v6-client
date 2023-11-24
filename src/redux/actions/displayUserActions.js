@@ -5,10 +5,10 @@ const apiUrl =process.env.REACT_APP_API_URL;
 export const getAllUsers = () => async dispatch => {
 
   dispatch({ type: 'LOADING', payload: true });
-  // const apiUrl =process.env.REACT_APP_API_URL;
+  
 
   try {
-    const response = await axios.get(`${apiUrl}/api/users/getallusers`);
+    const response = await axios.get(`https://react-router-v6-server-c641af014fb5.herokuapp.com/api/users/getallusers`);
     dispatch({ type: 'GET_ALL_USERS', payload: response.data });
     dispatch({ type: 'LOADING', payload: false });
   } catch (error) {
@@ -22,8 +22,8 @@ export const deleteUser = (reqObj) => async dispatch => {
   dispatch({ type: 'LOADING', payload: true });
 
   try {
-    // const apiUrl =process.env.REACT_APP_API_URL;
-    await axios.post(`${apiUrl}/api/users/deleteuser`, reqObj);
+    
+    await axios.post(`https://react-router-v6-server-c641af014fb5.herokuapp.com/api/users/deleteuser`, reqObj);
 
     dispatch({ type: 'LOADING', payload: false });
     message.success('User deleted successfully');
@@ -37,9 +37,9 @@ export const deleteUser = (reqObj) => async dispatch => {
 };
 
 export const addUser = reqObj => async dispatch => {
-  dispatch({ type: 'LOADING', payload: true });
+  dispatch({ type: 'LOADING', pahttyload: true });
   try {
-    const response = await axios.post(`${apiUrl}/api/users/adduser`, reqObj);
+    const response = await axios.post(`https://react-router-v6-server-c641af014fb5.herokuapp.com/api/users/adduser`, reqObj);
     message.success('New user added successfully');
     dispatch({ type: 'LOADING', payload: false });
   } catch (error) {
@@ -56,7 +56,7 @@ export const editUser = (reqObj) => async dispatch => {
   dispatch({ type: 'LOADING', payload: true });
 
   try {
-    await axios.post(`${apiUrl}/api/users/edituser`, reqObj);
+    await axios.post(`https://react-router-v6-server-c641af014fb5.herokuapp.com/api/users/edituser`, reqObj);
 
     dispatch({ type: 'LOADING', payload: false });
     message.success('User details updated successfully');

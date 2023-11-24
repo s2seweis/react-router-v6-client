@@ -23,7 +23,7 @@ function Login() {
   return (
     <div
       className="login"
-      style={{ margin: 'auto', padding: '20px', justifyContent: 'center' }}
+      style={{ margin: 'auto', padding: '20px', justifyContent: 'center', marginTop:"20px" }}
     >
       {loading && <Spinner />}
       <Row

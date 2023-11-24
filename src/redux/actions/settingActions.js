@@ -7,7 +7,7 @@ export const getAllSettings=()=>async dispatch=>{
     dispatch({type: 'LOADING' , payload:true});
     
     try {
-        const response = await axios.get(`${apiUrl}/api/settings/getallsettings`);
+        const response = await axios.get(`https://react-router-v6-server-c641af014fb5.herokuapp.com/api/settings/getallsettings`);
         dispatch({type: 'GET_ALL_SETTINGS', payload:response.data});
         dispatch({type: 'LOADING' , payload:false});
     } catch (error) {
@@ -21,7 +21,7 @@ export const editSetting=(reqObj)=>async dispatch=>{
     dispatch({type: 'LOADING' , payload:true});
 
     try {
-         await axios.post(`${apiUrl}/api/settings/editsetting` , reqObj);
+         await axios.post(`https://react-router-v6-server-c641af014fb5.herokuapp.com/api/settings/editsetting` , reqObj);
        
          dispatch({type: 'LOADING' , payload:false});
          message.success('Setting details updated successfully');

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Col, Row, Form, Input, Select } from 'antd';
+import { Form, Input, Select } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import Spinner from '../Spinner';
 import { editSetting, getAllSettings } from '../../redux/actions/settingActions';
@@ -39,8 +39,8 @@ function EditSettingsComponent() {
         <a href="javascript:history.back()">Go Back</a>
       </div>
       {loading && <Spinner />}
-      <Row justify="center mt-5" style={{ marginTop: '25px' }}>
-        <Col style={{ background: 'aliceblue', borderRadius: '10px' }} lg={12} sm={20} xs={22} className="p-2">
+      <div style={{width:"350px", margin:"auto"}} justify="center mt-5" >
+        <div style={{ background: 'aliceblue', borderRadius: '10px' }} lg={12} sm={20} xs={22} className="p-2">
           {totalsettings.length > 0 && (
             <Form
               initialValues={setting}
@@ -72,8 +72,8 @@ function EditSettingsComponent() {
               </div>
             </Form>
           )}
-        </Col>
-      </Row>
+        </div>
+      </div>
     </div>
   );
 }

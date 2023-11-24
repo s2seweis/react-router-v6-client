@@ -3,7 +3,7 @@ import SettingsComponent from '../components/settings/SettingsComponent';
 
 const Settings = () => {
   return (
-    <div>
+    <div style={{width:"100%"}}>
       <SettingsComponent/>
     </div>
   );

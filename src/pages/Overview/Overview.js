@@ -16,12 +16,12 @@ const Overview = (props) => {
       <div className="public-routes section">
         <p>Public Routes</p>
         <div className="grid-container">
-          <a href="/login">Login</a>
-          <a href="/register">Register</a>
-          <a href="/">Overview</a>
-          <a href="/animation">Animation</a>
-          <a href="/forgotpassword">Forgot Password</a>
-          <a href="/resetlink">Reset Link</a>
+          <Link to="/login">Login</Link>
+          <Link to="/register">Register</Link>
+          <Link to="/">Overview</Link>
+          <Link to="/animation">Animation</Link>
+          <Link to="/forgotpassword">Forgot Password</Link>
+          <Link to="/resetlink">Reset Link</Link>
         </div>
         <hr className="hr" />
       </div>
